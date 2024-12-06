@@ -15,7 +15,7 @@ destroy.addEventListener('click', () => { boxes.innerHTML = ""; input.value=""})
 
 function createMarkup() {
   const amount = input.value;
-  if (+amount < 0 || +amount > 10) {
+  if (+amount < 0 || +amount > 100) {
     return;
   }
   createBoxes(+amount);
