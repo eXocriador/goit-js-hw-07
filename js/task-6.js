@@ -24,11 +24,13 @@ function createMarkup() {
 function createBoxes(amount) {
   boxes.innerHTML = "";
   const defaultSize = 30;
+  const boxesList = document.createDocumentFragment();
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     box.style.width = `${defaultSize + i * 10 }px`;
     box.style.height = `${defaultSize + i * 10 }px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxes.append(box);
+    boxesList.append(box);
   }
+  boxes.append(boxesList);
 }
